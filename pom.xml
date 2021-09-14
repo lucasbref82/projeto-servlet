@@ -9,9 +9,8 @@
 	<name>curso-jsp</name>
 	<description>curso jsp jdev treinamento d</description>
 
-
-
 	<dependencies>
+
 
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -32,6 +31,36 @@
 			<groupId>org.glassfish.web</groupId>
 			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
 			<version>2.0.0</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.16.0</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/tomcat/tomcat-util -->
+		<dependency>
+			<groupId>tomcat</groupId>
+			<artifactId>tomcat-util</artifactId>
+			<version>5.5.23</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-coyote -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-coyote</artifactId>
+			<version>10.1.0-M5</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/jakartaee-migration -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>jakartaee-migration</artifactId>
+			<version>0.2.0</version>
 		</dependency>
 
 
