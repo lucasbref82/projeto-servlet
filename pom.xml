@@ -42,25 +42,23 @@
 		</dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/tomcat/tomcat-util -->
+
 		<dependency>
 			<groupId>tomcat</groupId>
 			<artifactId>tomcat-util</artifactId>
 			<version>5.5.23</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-coyote -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-coyote</artifactId>
 			<version>10.1.0-M5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/jakartaee-migration -->
 		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>jakartaee-migration</artifactId>
-			<version>0.2.0</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.21</version>
 		</dependency>
 
 
