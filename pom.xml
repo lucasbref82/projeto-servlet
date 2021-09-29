@@ -9,6 +9,12 @@
 	<name>curso-jsp</name>
 	<description>curso jsp jdev treinamento d</description>
 
+
+	<properties>
+		<maven.compiler.target>16</maven.compiler.target>
+		<maven.compiler.source>16</maven.compiler.source>
+	</properties>
+
 	<dependencies>
 
 
