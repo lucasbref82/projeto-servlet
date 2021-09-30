@@ -14,37 +14,10 @@
 	<properties>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<tomcat.version>10.0.4</tomcat.version>
 	</properties>
 
 
 	<dependencies>
-
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-core</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-jasper</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-jasper-el</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-jsp-api</artifactId>
-			<version>${tomcat.version}</version>
-		</dependency>
 
 
 		<dependency>
@@ -100,12 +73,11 @@
 	</dependencies>
 
 	<build>
-		<finalName>embeddedTomcatSample</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
-
+				
 			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
@@ -113,24 +85,24 @@
 			</plugin>
 
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>appassembler-maven-plugin</artifactId>
-				<version>2.0.0</version>
-				<configuration>
-					<assembleDirectory>target</assembleDirectory>
-					<programs>
-						<program>
-							<mainClass>launch.Main</mainClass>
-							<name>webapp</name>
-						</program>
-					</programs>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
-							<goal>assemble</goal>
+							<goal>copy</goal>
 						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.heroku</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>9.0.52.0</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
