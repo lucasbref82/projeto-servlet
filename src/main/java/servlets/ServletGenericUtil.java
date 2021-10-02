@@ -3,9 +3,9 @@ package servlets;
 import java.io.Serializable;
 
 import dao.DAOUsuarioRepository;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import model.ModelLogin;
 
 public class ServletGenericUtil extends HttpServlet implements Serializable {
