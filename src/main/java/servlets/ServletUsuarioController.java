@@ -231,11 +231,7 @@ public class ServletUsuarioController extends ServletGenericUtil {
 				   response.getWriter().write(json);
 				 
 		
-			 }
-			 
-			 
-			 	
-			 
+			 }	 
 		 }
 		
 		 else {
@@ -304,7 +300,7 @@ public class ServletUsuarioController extends ServletGenericUtil {
 			Part part = request.getPart("fileFoto"); /*Pega foto da tela*/
 			
 			if (part.getSize() > 0) {
-				byte[] foto = IOUtils.toByteArray(part.getInputStream()); /*Converte imagem para byte*/
+				byte[] foto = IOUtils.toByteArray(part.getInputStream()); 
 				String imagemBase64 = "data:image/" + part.getContentType().split("\\/")[1] + ";base64," +  new Base64().encodeBase64String(foto);
 				
 				modelLogin.setFotouser(imagemBase64);
