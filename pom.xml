@@ -2,12 +2,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>curso-jsp</groupId>
-	<artifactId>curso-jsp</artifactId>
+	<groupId>projeto-servlet</groupId>
+	<artifactId>projeto-servlet</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>curso-jsp</name>
-	<description>curso jsp jdev treinamento d</description>
+	<name>projeto-servlet</name>
+	<description>Projeto criado para treinar JSP, Servlets, JDBC e Banco de dados</description>
 
 
 
@@ -18,74 +18,47 @@
 
 
 	<dependencies>
-
-
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.4.1212</version>
 		</dependency>
-
-
-
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.8</version>
 		</dependency>
-
-<!--  
-		<dependency>
-			<groupId>org.glassfish.web</groupId>
-			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
-			<version>2.0.0</version>
-		</dependency>
--->
-
-
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>4.0.0</version>
 			<scope>provided</scope>
 		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports -->
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
 			<version>6.17.0</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>tomcat</groupId>
 			<artifactId>tomcat-util</artifactId>
 			<version>5.5.23</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-coyote</artifactId>
 			<version>10.0.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-compress</artifactId>
 			<version>1.21</version>
 		</dependency>
-
-
-
 	</dependencies>
 
 	<build>

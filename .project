@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <projectDescription>
 	<name>curso-jsp</name>
 	<comment></comment>
@@ -34,4 +35,5 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+
 </projectDescription>
