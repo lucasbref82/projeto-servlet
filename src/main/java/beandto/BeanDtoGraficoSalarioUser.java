@@ -8,8 +8,8 @@ public class BeanDtoGraficoSalarioUser implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	List<String> perfils = new ArrayList<String>();
-	List<Double> salarios = new ArrayList<Double>();
+	List<String> perfils = new ArrayList<>();
+	List<Double> salarios = new ArrayList<>();
 
 	public List<String> getPerfils() {
 		return perfils;

@@ -18,19 +18,17 @@ CREATE TABLE public.model_login
   CONSTRAINT model_login_pkey PRIMARY KEY (id),
   CONSTRAINT login_unique UNIQUE (login)
 )
+
 WITH (
   OIDS=FALSE
 );
+
 ALTER TABLE public.model_login
   OWNER TO postgres;
-
-
 
 
 ALTER TABLE public.model_login
   OWNER TO postgres;
   
   
-  INSERT INTO public.model_login(
-            login, senha)
-    VALUES ( 'admin', 'admin');
+INSERT INTO public.model_login(login, senha) VALUES ( 'admin', 'admin');

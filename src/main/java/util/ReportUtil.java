@@ -21,7 +21,6 @@ public class ReportUtil implements Serializable {
 	public byte[] geraReltorioPDF(List listaDados, String nomeRelatorio, HashMap<String, Object> params, ServletContext servletContext) throws Exception {
 		
 		
-		/*Cria a lista de dados que vem do nosso SQL da consulta feita */
 		JRBeanCollectionDataSource jrbcds = new JRBeanCollectionDataSource(listaDados);
 		
 		String caminhoJasper = servletContext.getRealPath("relatorio") + File.separator + nomeRelatorio + ".jasper";
@@ -35,8 +34,6 @@ public class ReportUtil implements Serializable {
 
 	public byte[] geraReltorioPDF(List listaDados, String nomeRelatorio, ServletContext servletContext) throws Exception {
 		
-		
-		/*Cria a lista de dados que vem do nosso SQL da consulta feita */
 		JRBeanCollectionDataSource jrbcds = new JRBeanCollectionDataSource(listaDados);
 		
 		String caminhoJasper = servletContext.getRealPath("relatorio") + File.separator + nomeRelatorio + ".jasper";
