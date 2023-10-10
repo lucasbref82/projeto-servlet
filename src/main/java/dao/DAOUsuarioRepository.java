@@ -242,7 +242,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resultado = statement.executeQuery();
 		
-		while (resultado.next()) { /*percorrer as linhas de resultado do SQL*/
+		while (resultado.next()) {
 			
 			ModelLogin modelLogin = new ModelLogin();
 			
@@ -250,7 +250,6 @@ public class DAOUsuarioRepository {
 			modelLogin.setId(resultado.getLong("id"));
 			modelLogin.setLogin(resultado.getString("login"));
 			modelLogin.setNome(resultado.getString("nome"));
-			//modelLogin.setSenha(resultado.getString("senha"));
 			modelLogin.setPerfil(resultado.getString("perfil"));
 			modelLogin.setSexo(resultado.getString("sexo"));
 			modelLogin.setDataNascimento(resultado.getDate("datanascimento"));
@@ -275,7 +274,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resultado = statement.executeQuery();
 		
-		while (resultado.next()) { /*percorrer as linhas de resultado do SQL*/
+		while (resultado.next())
 			
 			ModelLogin modelLogin = new ModelLogin();
 			
@@ -283,7 +282,6 @@ public class DAOUsuarioRepository {
 			modelLogin.setId(resultado.getLong("id"));
 			modelLogin.setLogin(resultado.getString("login"));
 			modelLogin.setNome(resultado.getString("nome"));
-			//modelLogin.setSenha(resultado.getString("senha"));
 			modelLogin.setPerfil(resultado.getString("perfil"));
 			modelLogin.setDataNascimento(resultado.getDate("datanascimento"));
 			modelLogin.setSexo(resultado.getString("sexo"));
@@ -310,7 +308,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resultado = statement.executeQuery();
 		
-		while (resultado.next()) { /*percorrer as linhas de resultado do SQL*/
+		while (resultado.next()) {
 			
 			ModelLogin modelLogin = new ModelLogin();
 			
@@ -318,7 +316,6 @@ public class DAOUsuarioRepository {
 			modelLogin.setId(resultado.getLong("id"));
 			modelLogin.setLogin(resultado.getString("login"));
 			modelLogin.setNome(resultado.getString("nome"));
-			//modelLogin.setSenha(resultado.getString("senha"));
 			modelLogin.setPerfil(resultado.getString("perfil"));
 			modelLogin.setSexo(resultado.getString("sexo"));
 			
@@ -372,7 +369,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resultado = statement.executeQuery();
 		
-		while (resultado.next()) { /*percorrer as linhas de resultado do SQL*/
+		while (resultado.next()) {
 			
 			ModelLogin modelLogin = new ModelLogin();
 			
@@ -380,7 +377,6 @@ public class DAOUsuarioRepository {
 			modelLogin.setId(resultado.getLong("id"));
 			modelLogin.setLogin(resultado.getString("login"));
 			modelLogin.setNome(resultado.getString("nome"));
-			//modelLogin.setSenha(resultado.getString("senha"));
 			modelLogin.setPerfil(resultado.getString("perfil"));
 			modelLogin.setSexo(resultado.getString("sexo"));
 			
@@ -403,7 +399,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resultado = statement.executeQuery();
 		
-		while (resultado.next()) { /*percorrer as linhas de resultado do SQL*/
+		while (resultado.next()) {
 			
 			ModelLogin modelLogin = new ModelLogin();
 			
@@ -411,7 +407,6 @@ public class DAOUsuarioRepository {
 			modelLogin.setId(resultado.getLong("id"));
 			modelLogin.setLogin(resultado.getString("login"));
 			modelLogin.setNome(resultado.getString("nome"));
-			//modelLogin.setSenha(resultado.getString("senha"));
 			modelLogin.setPerfil(resultado.getString("perfil"));
 			modelLogin.setSexo(resultado.getString("sexo"));
 			
@@ -433,7 +428,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resutlado =  statement.executeQuery();
 		
-		while (resutlado.next()) /*Se tem resultado*/ {
+		while (resutlado.next()) {
 			
 			modelLogin.setId(resutlado.getLong("id"));
 			modelLogin.setEmail(resutlado.getString("email"));
@@ -473,7 +468,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resutlado =  statement.executeQuery();
 		
-		while (resutlado.next()) /*Se tem resultado*/ {
+		while (resutlado.next()){
 			
 			modelLogin.setId(resutlado.getLong("id"));
 			modelLogin.setEmail(resutlado.getString("email"));
@@ -511,7 +506,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resutlado =  statement.executeQuery();
 		
-		while (resutlado.next()) /*Se tem resultado*/ {
+		while (resutlado.next()){
 			
 			modelLogin.setId(resutlado.getLong("id"));
 			modelLogin.setEmail(resutlado.getString("email"));
@@ -589,7 +584,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resutlado =  statement.executeQuery();
 		
-		while (resutlado.next()) /*Se tem resultado*/ {
+		while (resutlado.next()) {
 			
 			modelLogin.setId(resutlado.getLong("id"));
 			modelLogin.setEmail(resutlado.getString("email"));
@@ -624,7 +619,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resutlado =  statement.executeQuery();
 		
-		resutlado.next();/*Pra ele entrar nos resultados do sql*/
+		resutlado.next();
 		return resutlado.getBoolean("existe");
 		
 	}
