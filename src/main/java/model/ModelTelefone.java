@@ -11,9 +11,9 @@ public class ModelTelefone implements Serializable {
 	
 	private String numero;
 
-	private ModelLogin usuario_pai_id;
+	private ModelLogin usuarioPaiId;
 
-	private ModelLogin usuario_cad_id;
+	private ModelLogin usuarioCadastroId;
 
 	public Long getId() {
 		return id;
@@ -31,20 +31,20 @@ public class ModelTelefone implements Serializable {
 		this.numero = numero;
 	}
 
-	public ModelLogin getUsuario_pai_id() {
-		return usuario_pai_id;
+	public ModelLogin getIdUsuarioPai() {
+		return usuarioPaiId;
 	}
 
-	public void setUsuario_pai_id(ModelLogin usuario_pai_id) {
-		this.usuario_pai_id = usuario_pai_id;
+	public void setIdUsuarioPai(ModelLogin idUsuarioPai) {
+		this.usuarioPaiId = idUsuarioPai;
 	}
 
-	public ModelLogin getUsuario_cad_id() {
-		return usuario_cad_id;
+	public ModelLogin getIdUsuarioCadastro() {
+		return usuarioCadastroId;
 	}
 
-	public void setUsuario_cad_id(ModelLogin usuario_cad_id) {
-		this.usuario_cad_id = usuario_cad_id;
+	public void setIdUsuarioCadastro(ModelLogin idUsuarioCadastro) {
+		this.usuarioCadastroId = idUsuarioCadastro;
 	}
 
 	@Override

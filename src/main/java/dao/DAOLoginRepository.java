@@ -29,10 +29,10 @@ public class DAOLoginRepository {
 		ResultSet resultSet = statement.executeQuery();
 		
 		if (resultSet.next()) {
-			return true;/*autenticado*/
+			return true;
 		}
 		
-		return false; /*nao autenticado*/
+		return false;
 	}
 
 }

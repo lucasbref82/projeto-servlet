@@ -38,8 +38,8 @@ public class DAOTelefoneRepository {
 			
 			modelTelefone.setId(rs.getLong("id"));
 			modelTelefone.setNumero(rs.getString("numero"));
-			modelTelefone.setUsuario_cad_id(daoUsuarioRepository.consultaUsuarioID(rs.getLong("usuario_cad_id")));
-			modelTelefone.setUsuario_pai_id(daoUsuarioRepository.consultaUsuarioID(rs.getLong("usuario_pai_id")));
+			modelTelefone.setIdUsuarioCadastro(daoUsuarioRepository.consultaUsuarioID(rs.getLong("usuario_cad_id")));
+			modelTelefone.setIdUsuarioPai(daoUsuarioRepository.consultaUsuarioID(rs.getLong("usuario_pai_id")));
 			
 			retorno.add(modelTelefone);
 			
@@ -55,8 +55,8 @@ public class DAOTelefoneRepository {
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 		preparedStatement.setString(1, modelTelefone.getNumero());
-		preparedStatement.setLong(2, modelTelefone.getUsuario_pai_id().getId());
-		preparedStatement.setLong(3, modelTelefone.getUsuario_cad_id().getId());
+		preparedStatement.setLong(2, modelTelefone.getIdUsuarioPai().getId());
+		preparedStatement.setLong(3, modelTelefone.getIdUsuarioCadastro().getId());
 
 		preparedStatement.execute();
 

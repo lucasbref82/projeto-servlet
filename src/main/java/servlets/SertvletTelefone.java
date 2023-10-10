@@ -85,17 +85,17 @@ public class SertvletTelefone extends ServletGenericUtil {
 		
 		try {
 		
-			String usuario_pai_id = request.getParameter("id");
+			String idUsuarioPai = request.getParameter("id");
 			String numero = request.getParameter("numero");
 			
 			
-			if (!daoTelefoneRepository.existeFone(numero, Long.valueOf(usuario_pai_id))) {
+			if (!daoTelefoneRepository.existeFone(numero, Long.valueOf(idUsuarioPai))) {
 			
 				ModelTelefone modelTelefone = new ModelTelefone();
 				
 				modelTelefone.setNumero(numero);
-				modelTelefone.setUsuario_pai_id(daoUsuarioRepository.consultaUsuarioID(Long.parseLong(usuario_pai_id)));
-				modelTelefone.setUsuario_cad_id(super.getUserLogadoObjt(request));
+				modelTelefone.setIdUsuarioPai(daoUsuarioRepository.consultaUsuarioID(Long.parseLong(idUsuarioPai)));
+				modelTelefone.setIdUsuarioCadastro(super.getUserLogadoObjt(request));
 				
 				daoTelefoneRepository.gravaTelefone(modelTelefone);
 				
@@ -105,9 +105,9 @@ public class SertvletTelefone extends ServletGenericUtil {
 				request.setAttribute("msg", "Telefone já existe");
 			}
 			
-				List<ModelTelefone> modelTelefones = daoTelefoneRepository.listFone(Long.parseLong(usuario_pai_id));
+				List<ModelTelefone> modelTelefones = daoTelefoneRepository.listFone(Long.parseLong(idUsuarioPai));
 				
-				ModelLogin modelLogin = daoUsuarioRepository.consultaUsuarioID(Long.parseLong(usuario_pai_id));
+				ModelLogin modelLogin = daoUsuarioRepository.consultaUsuarioID(Long.parseLong(idUsuarioPai));
 				
 				request.setAttribute("modelLogin", modelLogin);
 				request.setAttribute("modelTelefones", modelTelefones);

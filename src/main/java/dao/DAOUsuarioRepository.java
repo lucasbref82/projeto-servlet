@@ -549,7 +549,7 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resutlado =  statement.executeQuery();
 		
-		while (resutlado.next()) /*Se tem resultado*/ {
+		while (resutlado.next()) {
 			
 			modelLogin.setId(resutlado.getLong("id"));
 			modelLogin.setEmail(resutlado.getString("email"));
@@ -661,8 +661,8 @@ public class DAOUsuarioRepository {
 			
 			modelTelefone.setId(rs.getLong("id"));
 			modelTelefone.setNumero(rs.getString("numero"));
-			modelTelefone.setUsuario_cad_id(this.consultaUsuarioID(rs.getLong("usuario_cad_id")));
-			modelTelefone.setUsuario_pai_id(this.consultaUsuarioID(rs.getLong("usuario_pai_id")));
+			modelTelefone.setIdUsuarioCadastro(this.consultaUsuarioID(rs.getLong("idUsuarioCadastro")));
+			modelTelefone.setIdUsuarioPai(this.consultaUsuarioID(rs.getLong("idUsuarioPai")));
 			
 			retorno.add(modelTelefone);
 			

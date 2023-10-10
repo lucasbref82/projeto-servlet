@@ -17,22 +17,22 @@ public class DaoVersionadorBanco implements Serializable {
 		connection = SingleConnectionBanco.getConnection();
 	}
 
-	public void gravaArquivoSqlRodado(String nome_file) throws Exception {
+	public void gravaArquivoSqlRodado(String nomeArquivo) throws Exception {
 
 		String sql = "INSERT INTO versionadorbanco(arquivo_sql) VALUES (?);";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
-		preparedStatement.setString(1, nome_file);
+		preparedStatement.setString(1, nomeArquivo);
 		preparedStatement.execute();
 
 	}
 
-	public boolean arquivoSqlRodado(String nome_do_arquivo) throws Exception {
+	public boolean arquivoSqlRodado(String nomeArquivo) throws Exception {
 
 		String sql = "select count(1) > 0 as rodado from versionadorbanco where arquivo_sql = ?";
 
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-		preparedStatement.setString(1, nome_do_arquivo);
+		preparedStatement.setString(1, nomeArquivo);
 
 		ResultSet resultSet = preparedStatement.executeQuery();
 
