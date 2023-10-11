@@ -274,8 +274,8 @@ public class DAOUsuarioRepository {
 		
 		ResultSet resultado = statement.executeQuery();
 		
-		while (resultado.next())
-			
+		while (resultado.next()) {
+						
 			ModelLogin modelLogin = new ModelLogin();
 			
 			modelLogin.setEmail(resultado.getString("email"));
